@@ -78,7 +78,7 @@ Assigning a variable is an example of a statement. Using arithmetic to create a 
 ## Code Blocks
 Code blocks, which we will see more often as we start writing functions, are denoted by curly brackets. Code inside the curly brackets are typically indented two to four spaces. This isn't required to run the code, but it does make reading it easier and follows the coding guidelines.
 
-
+> Let's move on!
 
 # Deliverable 1:  
 ## Filter UFO sightings on multiple criteria
