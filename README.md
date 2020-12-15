@@ -11,7 +11,7 @@
 * Data Tools: ECMAScript, JavaScript, Jupyter Notebook, Python and MongoDB
 * Software: ES6+, ECMAScript, MongoDB, Python 3.8.3, Visual Studio Code 1.50.0
 
-For more information, read the [`Documentation on MongoDB and other data typess`](https://docs.mongodb.com/). 
+For more information, read the [`Documentation on JavaScript and other JS typess`](https://docs.mongodb.com/). 
 
 ## Overview of ES6+
 ECMAScript, also referred to as "ES," is a scripting language designed to help standardize JavaScript. This means that ES provides guidelines and rules for JavaScript to follow, such as how a function should be created to run correctly, also known as the **proper syntax**.
@@ -31,6 +31,16 @@ JavaScript after the ES6 update is like the newer computer. This update included
 > `for...of` loops is a new syntax associated with JavaScript, so it's okay to not be familiar with it yet! We'll discuss this syntax in more detail as we learn more about the language.
 
 Later editions of ECMAScript brought about new additions as well, but they are for more advanced uses of the language. In this module, our focus will be on basic JavaScript and ES6 capabilities such as arrow functions. Both are still used today, and there's a chance you'll come up against older versions of JavaScript during interviews as well.
+
+
+## JavaScript in the Real World
+JavaScript is one of the powerhouse languages out in the wild today. While its strength is in creating visually appealing and dynamic content, it is starting to grow into other fields as well. Tensorflow, a popular machine learning tool, even has its own JavaScript library now.
+
+It's pretty easy to start feeling daunted by everything JavaScript can do, so Dana is more interested in examples of similar websites—ones that use filters on lots of data.
+
+* **Online shopping websites:** These are a great example of dynamic content. They contain filters for departments, and then filters for items within those departments. Filters on top of filters!
+* **Ecological data:** [`DThe National Ecological Observatory Network (NEON)`](https://data.neonscience.org/browse-data?showAllDates=true&showAllSites=true&showTheme=org) has very large and diverse datasets; these are also displayed on their website as dynamic tables with multiple filters.
+* **Weather data:** ([`The National Snow & Ice Data Center (NSIDC)`](https://nsidc.org/data/search/#keywords=permafrost/sortKeys=score,,desc/facetFilters=%257B%257D/pageNumber=1/itemsPerPage=25) also has very large datasets presented in table format on their website. These tables include filters and parameters that can be applied to their table.
 
 
 ## Deliverable 1:  Filter UFO sightings on multiple criteria
