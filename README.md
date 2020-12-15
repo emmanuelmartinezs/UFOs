@@ -80,7 +80,8 @@ Code blocks, which we will see more often as we start writing functions, are den
 
 
 
-## Deliverable 1:  Filter UFO sightings on multiple criteria
+# Deliverable 1:  
+## Filter UFO sightings on multiple criteria
 ### Deliverable Requirements:
 Using JavaScript and HTML, you’ll modify the code in your `index.html` file to create more table filters. In addition to the date filter you created in this module, you’ll add filters for the city, state, country, and shape, as shown in the following image:
 
@@ -213,7 +214,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 
 
-## Deliverable 2: A written report on the UFO analysis
+# Deliverable 2: 
+## A written report on the UFO analysis
 ### Deliverable Requirements:
 For your written analysis, be sure to use complete and coherent sentences. Your written analysis should contain three sections, which cover the following:
 
