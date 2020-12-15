@@ -42,6 +42,43 @@ It's pretty easy to start feeling daunted by everything JavaScript can do, so Da
 * **Ecological data:** [`DThe National Ecological Observatory Network (NEON)`](https://data.neonscience.org/browse-data?showAllDates=true&showAllSites=true&showTheme=org) has very large and diverse datasets; these are also displayed on their website as dynamic tables with multiple filters.
 * **Weather data:** ([`The National Snow & Ice Data Center (NSIDC)`](https://nsidc.org/data/search/#keywords=permafrost/sortKeys=score,,desc/facetFilters=%257B%257D/pageNumber=1/itemsPerPage=25) also has very large datasets presented in table format on their website. These tables include filters and parameters that can be applied to their table.
 
+## Writing JavaScript
+One major component of each coding language is its syntax. For example, Python is a pretty clean and easy-to-read language; there aren't many semicolons, and the indentation and spacing makes sense. SQL, on the other hand, includes semicolons, but it also has guidelines and requirements when it comes to indentation and spacing.
+
+JavaScript is no different: there are guidelines and requirements for writing it. But because JavaScript can be added to an HTML page, there are more guidelines and requirements than for languages that can only live in a .js file or Jupyter notebook such as Python. There are a few important things to remember about JavaScript syntax. We'll start with the following:
+
+* Case sensitivity
+* Semicolons
+* Statements and expressions
+* Code blocks
+
+## Case Sensitivity
+JavaScript is case sensitive. **Case sensitivity** means that JavaScript considers upper- and lower-case words to be different. For example, if we were to assign the words "data" and "Data" as variables, we would be able to save different information in each word. Of course, actually doing this with the word "data" could lead to confusion pretty quickly. Instead, just remember JavaScript cares about capital letters.
+
+Similarly, JavaScript uses different naming conventions than Python that involve case sensitivity. Different languages utilize different methods to link words without using spaces, which is called a **case style**.
+
+## Semicolons
+Much like SQL, when coding in JavaScript it's good practice to end statements with a semicolon. Technically, they are optional when it comes to executing your code, but they are helpful because they tell JavaScript that a particular line or block of code is complete. It's considered a best practice to include semicolons throughout your code. You'll encounter many semicolons throughout this module.
+
+Let's use a print statement as an example. In JavaScript, a print statement is called a **console log**. To print "Hello, world!" to the console, we would use this line:
+
+````JS
+// Printing a string with JavaScript
+console.log("Hello, world!");
+````
+
+## Statements and Expressions
+When describing JavaScript code, the terms "statements" and "expressions" are both used, and often. Here's how to distinguish between the two:
+
+* Statements perform actions.
+* Expressions create values.
+
+Assigning a variable is an example of a statement. Using arithmetic to create a new value is an expression.
+
+## Code Blocks
+Code blocks, which we will see more often as we start writing functions, are denoted by curly brackets. Code inside the curly brackets are typically indented two to four spaces. This isn't required to run the code, but it does make reading it easier and follows the coding guidelines.
+
+
 
 ## Deliverable 1:  Filter UFO sightings on multiple criteria
 ### Deliverable Requirements:
