@@ -12,12 +12,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UFO Finder</title>
 
+
+    <!--link to BootStrap-->    
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+
+
+    <!--link to external CSS file-->
     <link rel="stylesheet" href="static/css/style.css">
 
 </head>
@@ -31,11 +36,13 @@
     </div>
 
 
+
+    <!--Webpage Header-->
     <div class="jumbotron">
         <h1 class="display-4">The Truth is Out There</h1>
     </div>
 
-
+    <!--Article Title and Paragraph-->
     <div class="container-fluid">
         <div class="row">
           <div class="col-md-4">
@@ -67,26 +74,48 @@
         </div>
     </div>
 
+
+
+    <!--Filter and Table-->
     <div class="container-fluid">
         <div class="row">
           <div class="col-md-3">
                 <form class="bg-dark">
                     <p>Filter Search</p>
                     <ul class="bg-dark">
-                    <li class="list-group" class="btn-dark">
-                            <label for="date">Enter Date</label>
-                            <input type="text" placeholder="1/10/2010" id="datetime" />
-                    </li>
 
-                    <li class="list-group" class="btn-dark">
-                            <button id="filter-btn" type="button" class="btn-dark">
-                            Filter Table
-                            </button>
-                    </li>
+                        <!-- CHALLENGE NEED - Filter Using New <form> Tag-->
+                        <li class="list-group" class="btn-dark">
+                                <label for="date">Enter Date</label>
+                                <input type="text" placeholder="1/10/2010" id="datetime" />
+                        </li>
+
+                        <li class="list-group" class="btn-dark">
+                            <label for="city">Enter City</label>
+                            <input type="text" placeholder="benton" id="city">
+                        </li>
+
+                        <li class="list-group" class="btn-dark">
+                            <label for="state">Enter State</label>
+                            <input type="text" placeholder="ar" id="state">
+                        </li>
+
+                        <li class="list-group" class="btn-dark">
+                            <label for="country">Enter Country</label>
+                            <input type="text" placeholder="us" id="country">
+                        </li>
+
+                        <li class="list-group" class="btn-dark">
+                            <label for="shape">Enter Shape</label>
+                            <input type="text" placeholder="circle" id="shape">
+                        </li>
+
                     </ul>
                 </form>
           </div>
 
+
+          <!--Dynamic Table-->
           <div class="col-md-9">
                 <table class="table table-striped">
                 <thead>
@@ -100,6 +129,8 @@
                             <th>Comments</th>
                         </tr>
                 </thead>
+
+                <!--JS Script with D3 Library-->
                 <tbody></tbody>
                 </table>
           </div>
