@@ -102,115 +102,179 @@ Using JavaScript, you’ll replace the handleClick() function in your app.js fil
 1. **The list element that creates the button is removed, and there are five list elements for filtering in the `index.html` file.**
 
 
-> Image with `JavaScript`, `MongoDB` & `HTML` Code below.
+> Image with `JavaScript` & `HTML` Code below.
 
 **Code and Image**
 
 
-````python
-# Mission to Mars (Module Code)
-# by Emmanuel Martinez
+````html
+    <!--Filter and Table-->
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+                <form class="bg-dark">
+                    <p>Filter Search</p>
+                    <ul class="bg-dark">
 
-# Import Splinter and BeautifulSoup
-import pandas as pd
-from splinter import Browser
-from bs4 import BeautifulSoup as soup
-from webdriver_manager.chrome import ChromeDriverManager
+                        <!-- CHALLENGE NEED - Filter Using New <form> Tag-->
+                        <li class="list-group" class="btn-dark">
+                                <label for="date">Enter Date</label>
+                                <input type="text" placeholder="1/10/2010" id="datetime" />
+                        </li>
+
+                        <li class="list-group" class="btn-dark">
+                            <label for="city">Enter City</label>
+                            <input type="text" placeholder="benton" id="city">
+                        </li>
+
+                        <li class="list-group" class="btn-dark">
+                            <label for="state">Enter State</label>
+                            <input type="text" placeholder="ar" id="state">
+                        </li>
+
+                        <li class="list-group" class="btn-dark">
+                            <label for="country">Enter Country</label>
+                            <input type="text" placeholder="us" id="country">
+                        </li>
+
+                        <li class="list-group" class="btn-dark">
+                            <label for="shape">Enter Shape</label>
+                            <input type="text" placeholder="circle" id="shape">
+                        </li>
+
+                    </ul>
+                </form>
+          </div>
+
+
+          <!--Dynamic Table-->
+          <div class="col-md-9">
+                <table class="table table-striped">
+                <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Country</th>
+                            <th>Shape</th>
+                            <th>Duration</th>
+                            <th>Comments</th>
+                        </tr>
+                </thead>
+                <tbody></tbody>
+                </table>
+          </div>
 ````
 
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mission-to-Mars/blob/main/Resources/Images/1.1.JPG?raw=true)
+![name-of-you-image](https://github.com/emmanuelmartinezs/UFOs/blob/main/Resources/Images/1.1.JPG?raw=true)
 
 
 
 2. **The event listener is modified to detect changes to each filter in the `app.js` file.**
 
 
-> Image with `JavaScript`, `MongoDB` & `HTML` Code below.
+> Image with `JavaScript` & `HTML` Code below.
 
 **Code and Image**
 
 
-````python
-# Mission to Mars (Module Code)
-# by Emmanuel Martinez
+````java
+// 1. Create a variable to keep track of all the filters as an object.
+var filters = {};
 
-# Import Splinter and BeautifulSoup
-import pandas as pd
-from splinter import Browser
-from bs4 import BeautifulSoup as soup
-from webdriver_manager.chrome import ChromeDriverManager
+// 3. Use this function to update the filters. 
+function updateFilters() {
+
+    // 4a. Save the element that was changed as a variable.
+    let inputElement = d3.select(this);
 ````
 
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mission-to-Mars/blob/main/Resources/Images/1.1.JPG?raw=true)
+![name-of-you-image](https://github.com/emmanuelmartinezs/UFOs/blob/main/Resources/Images/1.2.JPG?raw=true)
 
 
 
 3. ​**The `updateFilters()` function saves the element, value, and the id of the filter that was changed.**
 
 
-> Image with `JavaScript`, `MongoDB` & `HTML` Code below.
+> Image with `JavaScript` & `HTML` Code below.
 
 **Code and Image**
 
 
-````python
-# Mission to Mars (Module Code)
-# by Emmanuel Martinez
+````java
+function updateFilters() {
 
-# Import Splinter and BeautifulSoup
-import pandas as pd
-from splinter import Browser
-from bs4 import BeautifulSoup as soup
-from webdriver_manager.chrome import ChromeDriverManager
+    // 4a. Save the element that was changed as a variable.
+    let inputElement = d3.select(this);
+
+    // 4b. Save the value that was changed as a variable.
+    let inputValue = inputElement.property("value");
+
+    // 4c. Save the id of the filter that was changed as a variable.
+    let inputID = inputElement.attr("id");
 ````
 
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mission-to-Mars/blob/main/Resources/Images/1.1.JPG?raw=true)
+![name-of-you-image](https://github.com/emmanuelmartinezs/UFOs/blob/main/Resources/Images/1.3.JPG?raw=true)
 
 
 
 4. **The `filterTable()` function loops through all of the filters and keeps any data that matches the filter values.**
 
 
-> Image with `JavaScript`, `MongoDB` & `HTML` Code below.
+> Image with `JavaScript` & `HTML` Code below.
 
 **Code and Image**
 
 
-````python
-# Mission to Mars (Module Code)
-# by Emmanuel Martinez
+````java
+    // 5. If a filter value was entered then add that filterId and value
+    // to the filters list. Otherwise, clear that filter from the filters object.
 
-# Import Splinter and BeautifulSoup
-import pandas as pd
-from splinter import Browser
-from bs4 import BeautifulSoup as soup
-from webdriver_manager.chrome import ChromeDriverManager
+        if (inputValue) {
+            filters[inputID] = inputValue;
+        } else{filters ={};};
+ 
+  
+    // 6. Call function to apply all filters and rebuild the table
+    filterTable(filters);
+  
+  }
 ````
 
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mission-to-Mars/blob/main/Resources/Images/1.1.JPG?raw=true)
+![name-of-you-image](https://github.com/emmanuelmartinezs/UFOs/blob/main/Resources/Images/1.4.JPG?raw=true)
 
 
 
 5. **The webpage filters the table correctly based on user input.**
 
 
-> Image with `JavaScript`, `MongoDB` & `HTML` Code below.
+> Image with `JavaScript` & `HTML` Code below.
 
 **Code and Image**
 
 
-````python
-# Mission to Mars (Module Code)
-# by Emmanuel Martinez
+````java
+  // 7. Use this function to filter the table when data is entered.
+  function filterTable() {
+  
+    // 8. Set the filtered data to the tableData.
+    let filteredData = tableData;
+  
+    // 9. Loop through all of the filters and keep any data that
+    // matches the filter values
+    Object.entries(obj).forEach(([fkey, fval]) =>{
+        
+      filteredData = filteredData.filter((row) => row[fkey] === fval)
+          
 
-# Import Splinter and BeautifulSoup
-import pandas as pd
-from splinter import Browser
-from bs4 import BeautifulSoup as soup
-from webdriver_manager.chrome import ChromeDriverManager
+  });  
+  
+    // 10. Finally, rebuild the table using the filtered data
+    buildTable(filteredData); 
+  }
 ````
 
-![name-of-you-image](https://github.com/emmanuelmartinezs/Mission-to-Mars/blob/main/Resources/Images/1.1.JPG?raw=true)
+![name-of-you-image](https://github.com/emmanuelmartinezs/UFOs/blob/main/Resources/Images/1.5.JPG?raw=true)
 
 
 
