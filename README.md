@@ -11,7 +11,7 @@
 * Data Tools: ECMAScript, JavaScript, Jupyter Notebook, Python and MongoDB
 * Software: ES6+, ECMAScript, MongoDB, Python 3.8.3, Visual Studio Code 1.50.0
 
-For more information, read the [`Documentation on JavaScript and other JS typess`](https://docs.mongodb.com/). 
+For more information, read the [`Documentation on JavaScript and other JS typess`](https://codeburst.io/javascript-double-equals-vs-triple-equals-61d4ce5a121a). 
 
 ## Overview of ES6+
 ECMAScript, also referred to as "ES," is a scripting language designed to help standardize JavaScript. This means that ES provides guidelines and rules for JavaScript to follow, such as how a function should be created to run correctly, also known as the **proper syntax**.
