@@ -1,30 +1,33 @@
-// from data.js
+// import data from data.js
 const tableData = data;
 
-// get table references
-var tbody = d3.select("tbody");
+// reference the HTML table(output) using d3 library
+var tbody = d3.select('tbody');
 
+// Function of populate data into html table
 function buildTable(data) {
-  // First, clear out any existing data
-  tbody.html("");
+    // init table data
+    tbody.html('');
 
-  // Next, loop through each object in the data
-  // and append a row and cells for each value in the row
-  data.forEach((dataRow) => {
-    // Append a row to the table body
-    let row = tbody.append("tr");
-
-    // Loop through each field in the dataRow and add
-    // each value as a table cell (td)
-    Object.values(dataRow).forEach((val) => {
-      let cell = row.append("td");
-      cell.text(val);
+    // first array loop for <tr>
+    data.forEach((dataRow) => {
+        let row = tbody.append('tr'); //html
+        //second loop for <td>
+        Object.values(dataRow).forEach((val) =>{
+            let cell = row.append('td'); //html
+            // d3 funtion 
+            cell.text(val);
+        });
     });
-  });
-}
+
+};
+
+
+
 
 // 1. Create a variable to keep track of all the filters as an object.
-var filters = {};
+var filters = {
+};
 
 // 3. Use this function to update the filters. 
 function updateFilters() {
@@ -41,18 +44,17 @@ function updateFilters() {
     // 5. If a filter value was entered then add that filterId and value
     // to the filters list. Otherwise, clear that filter from the filters object.
 
-        if (inputValue) {
-            filters[inputID] = inputValue;
-        } else{filters ={};};
- 
+      if (inputValue) {
+        filters[inputID] = inputValue;
+    } else{filters ={};};
+  
   
     // 6. Call function to apply all filters and rebuild the table
     filterTable(filters);
-  
-  }
-  
-  // 7. Use this function to filter the table when data is entered.
-  function filterTable() {
+};
+
+// 7. Use this function to filter the table when data is entered.
+function filterTable(obj) {
   
     // 8. Set the filtered data to the tableData.
     let filteredData = tableData;
@@ -64,11 +66,11 @@ function updateFilters() {
       filteredData = filteredData.filter((row) => row[fkey] === fval)
           
 
-  });  
+  });
   
     // 10. Finally, rebuild the table using the filtered data
-    buildTable(filteredData); 
-  }
+    buildTable(filteredData);
+};
   
   // 2. Attach an event to listen for changes to each filter
   d3.selectAll("input").on("change",updateFilters);
